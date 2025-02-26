@@ -1,4 +1,9 @@
-<p>Example of the range selection</p>
+<select [(ngModel)]="hostelId" class="form-select my-2" aria-label="Default select example">
+    <option value="0">Hostels</option>
+    <option *ngFor="let hostel of hostels" [value]="hostel.id">{{hostel.name}}</option>
+</select>
+
+<input [(ngModel)]="guest" type="number" min="1" class="form-control my-2"  aria-describedby="basic-addon1">
 
 <ngb-datepicker #dp (dateSelect)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden" />
 
@@ -14,6 +19,9 @@
 		{{ date.day }}
 	</span>
 </ng-template>
+
+<button (click)="addBooking()" type="button" class="btn btn-primary">Primary</button>
+
 
 <hr />
 

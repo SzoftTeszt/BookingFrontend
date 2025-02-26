@@ -1,4 +1,5 @@
 <!-- {{hostels|json}} -->
+<button (click)="addBooking()" type="button" class="btn btn-primary">Primary</button>
 
 <div *ngFor="let hostel of hostels" class="row">
 <div (click)="hostel.visible = !hostel.visible" class="col">{{hostel.name}}</div>
