@@ -1,0 +1,7 @@
+<!-- {{hostels|json}} -->
+
+<div *ngFor="let hostel of hostels" class="row">
+<div (click)="hostel.visible = !hostel.visible" class="col">{{hostel.name}}</div>
+<div class="col">{{hostel.address}} </div>
+<app-bookings *ngIf="hostel.visible" [bookings]="hostel.bookings"></app-bookings>
+</div>

@@ -1,0 +1,7 @@
+<!-- <p>bookings works!</p>
+{{bookings|json}} -->
+<div *ngFor="let booking of bookings" class="row">
+<div class="col">{{booking.checkIn.slice(0,10)}}</div>
+<div class="col">{{booking.checkOut.slice(0,10)}}</div>
+<div class="col">{{booking.guest}}</div>
+</div>
